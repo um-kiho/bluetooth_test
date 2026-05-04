@@ -1,0 +1,27 @@
+[Bluetooth Test App - 작업 내역 요약]
+
+1. 안드로이드 디버깅 설정 안내
+   - 개발자 모드 및 USB 디버깅 활성화 확인
+   - USB 연결 모드(MTP/파일 전송) 및 RSA 지문 허용 가이드
+
+2. 실시간 수신 모니터(수신창) 구현
+   - 장치에서 수신되는 데이터를 실시간으로 누적 기록하는 터미널 스타일 UI 추가
+   - 데이터 표시 형식: 타임스탬프, HEX(16진수), ASCII 문자열 동시 출력
+   - 주요 기능: 로그 자동 스크롤, 로그 초기화(Clear), 모든 특성 수동 읽기(Refresh)
+
+3. 다중 UUID 수신 지원 및 출처 식별
+   - 지원 UUID: 0xFF20(Smartphone), 0xFF21(Sensor), 0xFF22(Extra), 0xFF30(Common)
+   - 장치 설계에 따라 서비스(Service) UUID를 기준으로 데이터 출처를 구분하여 표시
+   - 수신창에 [Smartphone], [Sensor], [Extra] 등의 라벨을 붙여 데이터 가독성 향상
+
+4. 스마트폰 송신 최적화
+   - 장치가 송신 주체를 인식할 수 있도록 0xFF20 서비스의 0xFF31 특성을 송신 통로로 설정
+   - 송신 시에도 수신창에 [SEND->Smartphone] 로그를 기록하여 정상 송신 여부 확인 가능
+
+5. 소스 코드 관리 및 백업
+   - 로컬 Git 저장소 초기화 및 첫 커밋 완료
+   - GitHub 원격 저장소 연동 및 푸시 완료
+   - 저장소 주소: https://github.com/um-kiho/bluetooth_test.git
+
+작업 완료 일시: 2026-05-04
+작업자: Antigravity AI
